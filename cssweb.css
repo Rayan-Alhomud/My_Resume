@@ -1,0 +1,321 @@
+/* cssweb.css - External stylesheet for Rayan Alhamoud's resume website */
+
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1a1a2e;
+  background: #f4f4f0;
+}
+img { max-width: 100%; display: block; }
+a { color: #0a5c8a; }
+a:hover { color: #063d5e; }
+
+/* ===== Utility ===== */
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ===== Avatar ===== */
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid #c8993a;
+  flex-shrink: 0;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: #0a1628;
+  color: #fff;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid #c8993a;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.name-area { display: flex; flex-direction: column; }
+.name {
+  font-size: 1.7rem;
+  margin: 0;
+  font-family: Georgia, serif;
+  letter-spacing: 0.5px;
+  color: #f0e6cc;
+}
+.subtitle {
+  margin: 3px 0 0;
+  font-size: 0.9rem;
+  color: #c8993a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Navigation ===== */
+.nav { margin-left: auto; }
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+}
+.nav-list a {
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  background: #c8993a;
+  color: #0a1628;
+  outline: none;
+}
+
+/* ===== Scroll offset fix (accounts for sticky header height ~65px) ===== */
+.section {
+  scroll-margin-top: 80px;
+  padding: 44px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 1.65rem;
+  margin: 0 0 16px;
+  color: #0a1628;
+  font-family: Georgia, serif;
+  border-left: 4px solid #c8993a;
+  padding-left: 12px;
+}
+
+/* ===== Lead paragraph ===== */
+.lead {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+/* ===== Grid & Cards ===== */
+.grid { display: grid; gap: 18px; }
+.two-across { grid-template-columns: 1fr 1fr; }
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: 3px solid #c8993a;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  color: #0a1628;
+}
+
+/* ===== Profile & Skills lists ===== */
+.profile-list, .skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.profile-list li, .skills li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== Education ===== */
+.education-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #0a1628;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.education-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  color: #0a1628;
+}
+.education-item p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Projects ===== */
+.project-item {
+  margin-bottom: 20px;
+}
+.project-content { padding: 4px 0; }
+.project-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  color: #0a1628;
+}
+.project-content p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.project-highlights {
+  padding-left: 1.3em;
+  margin: 10px 0;
+}
+.project-highlights li {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ===== Muted text ===== */
+.muted { color: #5a5a5a; }
+
+/* ===== Link style ===== */
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0a5c8a;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+/* ===== Certificates & Awards ===== */
+.certificate-list, .awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.certificate-list li, .awards-list li {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #c8993a;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* ===== Contact form ===== */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 700px;
+}
+.form-row { display: flex; flex-direction: column; }
+.form-row.full-width { grid-column: 1 / -1; }
+.form-row label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #0a1628;
+  font-family: Arial, sans-serif;
+}
+.form-row input,
+.form-row textarea {
+  padding: 10px 12px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: 2px solid #c8993a;
+  border-color: #c8993a;
+}
+
+/* ===== Button ===== */
+.btn {
+  display: inline-block;
+  background: #0a1628;
+  color: #f0e6cc;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+.btn:hover { background: #c8993a; color: #0a1628; }
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #0a1628;
+  color: #aaa;
+  padding: 20px 0;
+  border-top: 3px solid #c8993a;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+.site-footer p { margin: 0 0 8px; }
+.socials { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1a2a44;
+  color: #c8993a;
+  text-decoration: none;
+  border: 1px solid #c8993a;
+  transition: background 0.2s, color 0.2s;
+}
+.social-link svg { display: block; }
+.social-link:hover {
+  background: #c8993a;
+  color: #0a1628;
+}
+
+/* ===== Responsive: 992px ===== */
+@media (max-width: 992px) {
+  .name { font-size: 1.4rem; }
+  .nav-list a { padding: 7px 10px; font-size: 0.85rem; }
+}
+
+/* ===== Responsive: 768px ===== */
+@media (max-width: 768px) {
+  .two-across { grid-template-columns: 1fr; }
+  .nav { display: none; }
+  .contact-form { grid-template-columns: 1fr; }
+  .header-inner { flex-wrap: wrap; }
+}
+
+/* ===== Responsive: 576px ===== */
+@media (max-width: 576px) {
+  .name { font-size: 1.2rem; }
+  .section-title { font-size: 1.3rem; }
+  .lead { font-size: 0.95rem; }
+  .section { padding: 30px 0; scroll-margin-top: 70px; }
+}
