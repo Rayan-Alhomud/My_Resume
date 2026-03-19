@@ -220,54 +220,6 @@ a:hover { color: #063d5e; }
   font-size: 0.95rem;
 }
 
-/* ===== Contact form ===== */
-.contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  max-width: 700px;
-}
-.form-row { display: flex; flex-direction: column; }
-.form-row.full-width { grid-column: 1 / -1; }
-.form-row label {
-  font-size: 0.9rem;
-  margin-bottom: 6px;
-  font-weight: bold;
-  color: #0a1628;
-  font-family: Arial, sans-serif;
-}
-.form-row input,
-.form-row textarea {
-  padding: 10px 12px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  font-size: 0.95rem;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  transition: border-color 0.2s;
-}
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: 2px solid #c8993a;
-  border-color: #c8993a;
-}
-
-/* ===== Button ===== */
-.btn {
-  display: inline-block;
-  background: #0a1628;
-  color: #f0e6cc;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  transition: background 0.2s;
-}
-.btn:hover { background: #c8993a; color: #0a1628; }
-
 /* ===== Footer ===== */
 .site-footer {
   background: #0a1628;
@@ -307,9 +259,11 @@ a:hover { color: #063d5e; }
 /* ===== Responsive: 768px ===== */
 @media (max-width: 768px) {
   .two-across { grid-template-columns: 1fr; }
-  .nav { display: none; }
-  .contact-form { grid-template-columns: 1fr; }
-  .header-inner { flex-wrap: wrap; }
+  .header-inner { flex-wrap: wrap; justify-content: center; text-align: center; }
+  .name-area { text-align: center; }
+  .nav { margin-left: 0; width: 100%; margin-top: 10px; }
+  .nav-list { flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .section { scroll-margin-top: 130px; }
 }
 
 /* ===== Responsive: 576px ===== */
@@ -317,5 +271,5 @@ a:hover { color: #063d5e; }
   .name { font-size: 1.2rem; }
   .section-title { font-size: 1.3rem; }
   .lead { font-size: 0.95rem; }
-  .section { padding: 30px 0; scroll-margin-top: 70px; }
+  .section { padding: 30px 0; scroll-margin-top: 220px; }
 }
