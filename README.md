@@ -8,11 +8,11 @@ rayan-alhomud.github.io/My_Resume
 
 Sections:
 
-About Me & Skills
-Education
-Projects
-Certificates
-Awards
+About Me & Skills,
+Education,
+Projects,
+Certificates,
+Awards.
 
 Built With:
 
