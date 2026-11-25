@@ -4,7 +4,8 @@ A personal resume website built with HTML5 and CSS3 as part of the CCSW321 Web D
 
 Live Website:
 
-rayan-alhomud.github.io/My_Resume
+https://rayan-alhomud.github.io/My_Resume/
+
 
 Sections:
 
