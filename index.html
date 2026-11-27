@@ -13,7 +13,7 @@
         <img src="resume_photo.jpeg" alt="Rayan Alhamoud profile photo" class="avatar">
         <div class="name-area">
           <h1 class="name">Rayan Alhamoud</h1>
-          <p class="subtitle">Software Engineering Student</p>
+          <p class="subtitle">Software Engineering Graduate</p>
         </div>
         <nav class="nav" aria-label="Main navigation">
           <ul class="nav-list">
@@ -34,7 +34,7 @@
     <section id="about" class="section" aria-labelledby="about-title">
       <h2 id="about-title" class="section-title">About Me</h2>
       <p class="lead">
-        Graduating Software Engineering student at the University of Jeddah with a 4.88/5.0 GPA. Experienced in Agile/Scrum methodologies with hands-on expertise in Android & Web development, Java, and Firebase backend systems. Passionate about building scalable, secure, and user-friendly applications.
+        Software Engineering graduate of the University of Jeddah with a 4.88/5.0 GPA. Experienced in Agile/Scrum methodologies with hands-on expertise in Android & Web development, Java, and Firebase backend systems. Passionate about building scalable, secure, and user-friendly applications.
       </p>
       <div class="grid two-across">
         <div class="card">
@@ -119,6 +119,36 @@
             <li>Contact tenants directly via call or WhatsApp from within the app</li>
           </ul>
           <a href="https://nabhni.com/" class="link" aria-label="Visit the Nabhni website" target="_blank" rel="noopener noreferrer">Live Website</a>
+        </div>
+      </article>
+
+      <article class="project-item card" aria-labelledby="proj5-title">
+        <div class="project-content">
+          <h3 id="proj5-title">RARF — LLM-Assisted Requirements Reuse (IEEE-Format Research Paper)</h3>
+          <p class="muted">An Advanced Software Engineering research paper proposing RARF, a Retrieval-Augmented Requirements Reuse Framework that lets an LLM reuse past, approved requirements instead of inventing new ones.</p>
+          <p><strong>Period:</strong> Nov 2026 (team of 4)</p>
+          <p><strong>Tech:</strong> Python, retrieval-augmented generation (RAG), Sentence-BERT (all-MiniLM-L6-v2, ONNX Runtime), tf-idf (scikit-learn), EARS templates</p>
+          <ul class="project-highlights">
+            <li>Reviewed requirements reuse research (patterns, templates, ontologies, product lines, similarity retrieval, LLMs and RAG) and compared the approaches in tables</li>
+            <li>Designed a hybrid retrieval score (semantic + lexical + knowledge graph) with clear rules to reuse a requirement as-is, adapt it with an LLM, or draft a new one</li>
+            <li>Added a quality gate that checks template form, vague wording and grounding, and catches details the LLM made up before an analyst approves them</li>
+            <li>Validated it with a scripted case study on a campus ticketing app: 4 of 5 new requirements were adapted from past projects (a reuse ratio of 0.8), and an invented detail was flagged</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-item card" aria-labelledby="proj6-title">
+        <div class="project-content">
+          <h3 id="proj6-title">Software Quality Metrics Study — Java Chess Game</h3>
+          <p class="muted">A Software Quality and Metrics (CCSW-415) project that measured a Java Swing chess game (Hot-Seat, LAN and Minimax AI modes) with six techniques to judge its size, complexity, effort and reliability.</p>
+          <p><strong>Period:</strong> Nov 2026 (team of 4)</p>
+          <p><strong>Tech:</strong> Java, JUnit 5, Python, Lizard</p>
+          <ul class="project-highlights">
+            <li>Organized the study with Goal-Question-Metric and applied LOC, Halstead, McCabe cyclomatic complexity, Function Points and COCOMO</li>
+            <li>Compared four effort estimates with the real effort from the git history, and showed COCOMO and Halstead fell inside it</li>
+            <li>Wrote a defect probe that confirmed 9 real bugs (such as castling out of check) that none of the complexity metrics had pointed to</li>
+            <li>Raised comment density from 0.7% to 21% and recommended a refactoring plan to cut complexity and make the rules engine testable</li>
+          </ul>
         </div>
       </article>
 
